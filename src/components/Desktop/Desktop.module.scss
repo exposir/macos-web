@@ -4,5 +4,7 @@
   align-items: center;
   width: 100vw;
   height: 100vh;
-  background-image: url("https://blogs-macos.oss-cn-shenzhen.aliyuncs.com/ui/wallpaper-day.jpg");
+  background: url("https://blogs-macos.oss-cn-shenzhen.aliyuncs.com/ui/wallpaper-day.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
 }

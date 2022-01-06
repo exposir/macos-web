@@ -1,6 +1,6 @@
 import moduleCss from "./Dock.module.scss";
 
 function Dock() {
-  return <div className={moduleCss.box}>1234</div>;
+  return <div className={moduleCss.container}></div>;
 }
 export default Dock;
