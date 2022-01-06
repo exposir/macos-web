@@ -1,4 +1,4 @@
-import Desktop from "./components/Desktop/Desktop";
+import Desktop from "./components/Desktop";
 function App() {
   return (
     <>

@@ -1,9 +1,11 @@
-import Dock from "../Dock/Dock";
-import moduleCss from "./Desktop.module.scss";
+import Dock from "../Dock";
+import MenuBar from "../MenuBar";
+import moduleCss from "./style.module.scss";
 
 function Desktop() {
   return (
     <div className={moduleCss.container}>
+      <MenuBar />
       <Dock />
     </div>
   );
