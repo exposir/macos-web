@@ -1,14 +1,9 @@
-import { useState } from "react";
-import Desktop from "./components/Desktop";
-import "./App.css";
-
+import Desktop from "./components/Desktop/Desktop";
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
-    <div className="container mx-auto">
+    <>
       <Desktop />
-    </div>
+    </>
   );
 }
 
