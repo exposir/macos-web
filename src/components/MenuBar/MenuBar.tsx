@@ -1,4 +1,4 @@
-import moduleCss from "./style.module.scss";
+import moduleCss from "./MenuBar.module.scss";
 
 function Dock() {
   return <div className={moduleCss.container}></div>;

@@ -1,6 +1,6 @@
-import Dock from "../Dock";
-import MenuBar from "../MenuBar";
-import moduleCss from "./style.module.scss";
+import Dock from "../Dock/Dock";
+import MenuBar from "../MenuBar/MenuBar";
+import moduleCss from "./Desktop.module.scss";
 
 function Desktop() {
   return (
