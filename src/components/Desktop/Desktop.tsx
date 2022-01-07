@@ -1,5 +1,5 @@
 import moduleCss from "./Desktop.module.scss";
-
+import { useState } from "react";
 import Dock from "../Dock/Dock";
 import MenuBar from "../MenuBar/MenuBar";
 import Mask from "../Mask/Mask";
