@@ -1,4 +1,4 @@
-# uiMacOS
+# macos-web
 
 - 组件化
 - 可定制
