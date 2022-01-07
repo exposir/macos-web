@@ -1,11 +1,15 @@
-.container {
+.MenuBar {
   height: 22px;
   width: 100vw;
   background-color: hsla(240, 24%, 100%, 0.3);
   -webkit-backdrop-filter: blur(12px);
   backdrop-filter: blur(12px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 18px;
 }
 
 .icon {
-  margin-left: 18px;
+  // margin-left: 18px;
 }

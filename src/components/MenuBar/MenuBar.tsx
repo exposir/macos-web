@@ -1,12 +1,27 @@
 import moduleCss from "./MenuBar.module.scss";
+import dayjs from "dayjs";
+import zhCn from "dayjs/locale/zh-cn";
+import { useEffect, useState } from "react";
 
 function Dock() {
+  const [time, setTime] = useState("");
+  useEffect(() => {
+    setInterval(() => {
+      const dayjsZh = dayjs().locale(zhCn);
+
+      const day = dayjsZh.format("MMMD日");
+      const week = dayjsZh.format("ddd");
+      const time = dayjsZh.format("a h:mm");
+      setTime(`${day} ${week} ${time}`);
+    }, 1000);
+  }, []);
+
   return (
-    <div className={moduleCss.container}>
+    <div className={moduleCss.MenuBar}>
       <svg
         className={moduleCss.icon}
-        width="1.2rem"
-        height="1.2rem"
+        width="18px"
+        height="18px"
         preserveAspectRatio="xMidYMid meet"
         viewBox="0 0 24 24"
       >
@@ -15,6 +30,7 @@ function Dock() {
           fill="currentColor"
         ></path>
       </svg>
+      <div>{time}</div>
     </div>
   );
 }
