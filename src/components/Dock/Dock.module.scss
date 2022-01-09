@@ -1,5 +1,4 @@
-.container {
-  width: 50vw;
+.Dock {
   height: 65px;
   background-color: rgba(156, 163, 175, 0.3);
   box-shadow: 0 0 20px 0 rgb(0 0 0 / 17%);
@@ -9,4 +8,7 @@
   backdrop-filter: blur(8px);
   border-radius: 15px;
   margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
