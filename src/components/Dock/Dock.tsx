@@ -1,97 +1,63 @@
 import moduleCss from "./Dock.module.scss";
 import DockItem from "../DockItem/DockItem";
-import canader from "../../asset/canader.webp";
-import finder from "../../asset/finder.webp";
-import setting from "../../asset/setting.webp";
-import safari from "../../asset/safari.webp";
-import vscode from "../../asset/vscode.webp";
-import store from "../../asset/store.webp";
+import canader from "@/asset/canader.webp";
+import finder from "@/asset/finder.webp";
+import setting from "@/asset/setting.webp";
+import safari from "@/asset/safari.webp";
+import vscode from "@/asset/vscode.webp";
+import store from "@/asset/store.webp";
 
 import { useEffect, useRef } from "react";
 
 function Dock() {
   const refContainer = useRef(null);
   useEffect(() => {
+    addAnimation();
+  }, []);
+
+  function addAnimation() {
     const { children } = refContainer.current || { children: [] };
     const array = Array.from(children);
     array.forEach((item: any, index) => {
-      const a = array[index - 1];
-      const b = array[index + 1];
-      const c = array[index - 2];
-      const d = array[index + 2];
+      const xlSize = 100;
+      const XlMarginBottom = 30;
+      const lSize = 80;
+      const lMarginBottom = 20;
+      const mSize = 70;
+      const mMarginBottom = 10;
+
+      const defaultSize = 60;
+      const defaulteMarginBottom = 10;
+
+      const LLeftItem = array[index - 1];
+      const LRightItem = array[index + 1];
+      const mLeftItem = array[index - 2];
+      const mRightMItem = array[index + 2];
+
+      const changeSize = (item: any, size: any, marginBottom: any) => {
+        item.style.width = `${size}px`;
+        item.style.height = `${size}px`;
+        item.style.marginBottom = `${marginBottom}px`;
+      };
 
       item.onmouseenter = () => {
-        item.style.width = "100px";
-        item.style.height = "100px";
-        item.style.marginBottom = "30px";
-
-        if (a) {
-          const { style = { width: "", height: "", marginBottom: "" } } = a;
-          style.width = "85px";
-          style.height = "85px";
-          style.marginBottom = "20px";
-        }
-
-        if (b) {
-          const { style = { width: "", height: "", marginBottom: "" } } = b;
-          style.width = "85px";
-          style.height = "85px";
-          style.marginBottom = "20px";
-        }
-
-        if (c) {
-          const { style = { width: "", height: "", marginBottom: "" } } = c;
-          style.width = "70px";
-          style.height = "70px";
-          style.marginBottom = "10px";
-        }
-
-        if (d) {
-          const { style = { width: "", height: "", marginBottom: "" } } = d;
-          style.width = "70px";
-          style.height = "70px";
-          style.marginBottom = "10px";
-        }
+        changeSize(item, xlSize, XlMarginBottom);
+        LLeftItem && changeSize(LLeftItem, lSize, lMarginBottom);
+        LRightItem && changeSize(LRightItem, lSize, lMarginBottom);
+        mLeftItem && changeSize(mLeftItem, mSize, mMarginBottom);
+        mRightMItem && changeSize(mRightMItem, mSize, mMarginBottom);
       };
+
       item.onmouseleave = () => {
-        item.style.width = "60px";
-        item.style.height = "60px";
-        item.style.marginBottom = "0px";
-
-        if (a) {
-          const { style = { width: "", height: "", marginBottom: "" } } = a;
-
-          style.width = "60px";
-          style.height = "60px";
-          style.marginBottom = "0px";
-        }
-
-        if (b) {
-          const { style = { width: "", height: "", marginBottom: "" } } = b;
-
-          style.width = "60px";
-          style.height = "60px";
-          style.marginBottom = "0px";
-        }
-
-        if (c) {
-          const { style = { width: "", height: "", marginBottom: "" } } = c;
-
-          style.width = "60px";
-          style.height = "60px";
-          style.marginBottom = "0px";
-        }
-
-        if (d) {
-          const { style = { width: "", height: "", marginBottom: "" } } = d;
-
-          style.width = "60px";
-          style.height = "60px";
-          style.marginBottom = "0px";
-        }
+        changeSize(item, defaultSize, defaulteMarginBottom);
+        LLeftItem && changeSize(LLeftItem, defaultSize, defaulteMarginBottom);
+        LRightItem && changeSize(LRightItem, defaultSize, defaulteMarginBottom);
+        mLeftItem && changeSize(mLeftItem, defaultSize, defaulteMarginBottom);
+        mRightMItem &&
+          changeSize(mRightMItem, defaultSize, defaulteMarginBottom);
       };
     });
-  }, []);
+  }
 
   return (
     <div ref={refContainer} className={moduleCss.Dock}>
@@ -100,13 +66,6 @@ function Dock() {
       <DockItem src={safari} />
       <DockItem src={vscode} />
       <DockItem src={store} />
-      <DockItem src={setting} />
-      <DockItem src={setting} />
-      <DockItem src={setting} />
-      <DockItem src={setting} />
-      <DockItem src={setting} />
-      <DockItem src={setting} />
-      <DockItem src={setting} />
       <DockItem src={setting} />
     </div>
   );
