@@ -10,69 +10,84 @@ import store from "../../asset/store.webp";
 import { useEffect, useRef } from "react";
 
 function Dock() {
-  const refContainer = useRef({ children: [] });
+  const refContainer = useRef(null);
   useEffect(() => {
-    const { children } = refContainer.current;
-
+    const { children } = refContainer.current || { children: [] };
     const array = Array.from(children);
     array.forEach((item: any, index) => {
-      console.log(item);
+      const a = array[index - 1];
+      const b = array[index + 1];
+      const c = array[index - 2];
+      const d = array[index + 2];
+
       item.onmouseenter = () => {
         item.style.width = "100px";
         item.style.height = "100px";
         item.style.marginBottom = "30px";
 
-        if (array[index - 1]) {
-          array[index - 1].style.width = "85px";
-          array[index - 1].style.height = "85px";
-          array[index - 1].style.marginBottom = "20px";
+        if (a) {
+          const { style = { width: "", height: "", marginBottom: "" } } = a;
+          style.width = "85px";
+          style.height = "85px";
+          style.marginBottom = "20px";
         }
 
-        if (array[index + 1]) {
-          array[index + 1].style.width = "85px";
-          array[index + 1].style.height = "85px";
-          array[index + 1].style.marginBottom = "20px";
+        if (b) {
+          const { style = { width: "", height: "", marginBottom: "" } } = b;
+          style.width = "85px";
+          style.height = "85px";
+          style.marginBottom = "20px";
         }
 
-        if (array[index - 2]) {
-          array[index - 2].style.width = "70px";
-          array[index - 2].style.height = "70px";
-          array[index - 2].style.marginBottom = "10px";
+        if (c) {
+          const { style = { width: "", height: "", marginBottom: "" } } = c;
+          style.width = "70px";
+          style.height = "70px";
+          style.marginBottom = "10px";
         }
 
-        if (array[index + 2]) {
-          array[index + 2].style.width = "70px";
-          array[index + 2].style.height = "70px";
-          array[index + 2].style.marginBottom = "10px";
+        if (d) {
+          const { style = { width: "", height: "", marginBottom: "" } } = d;
+          style.width = "70px";
+          style.height = "70px";
+          style.marginBottom = "10px";
         }
       };
-      item.onmouseleave = (e) => {
+      item.onmouseleave = () => {
         item.style.width = "60px";
         item.style.height = "60px";
         item.style.marginBottom = "0px";
 
-        if (array[index - 1]) {
-          array[index - 1].style.width = "60px";
-          array[index - 1].style.height = "60px";
-          array[index - 1].style.marginBottom = "0px";
+        if (a) {
+          const { style = { width: "", height: "", marginBottom: "" } } = a;
+
+          style.width = "60px";
+          style.height = "60px";
+          style.marginBottom = "0px";
         }
 
-        if (array[index + 1]) {
-          array[index + 1].style.width = "60px";
-          array[index + 1].style.height = "60px";
-          array[index + 1].style.marginBottom = "0px";
+        if (b) {
+          const { style = { width: "", height: "", marginBottom: "" } } = b;
+
+          style.width = "60px";
+          style.height = "60px";
+          style.marginBottom = "0px";
         }
 
-        if (array[index - 2]) {
-          array[index - 2].style.width = "60px";
-          array[index - 2].style.height = "60px";
-          array[index - 2].style.marginBottom = "0px";
+        if (c) {
+          const { style = { width: "", height: "", marginBottom: "" } } = c;
+
+          style.width = "60px";
+          style.height = "60px";
+          style.marginBottom = "0px";
         }
 
-        if (array[index + 2]) {
-          array[index + 2].style.width = "60px";
-          array[index + 2].style.height = "60px";
-          array[index + 2].style.marginBottom = "0px";
+        if (d) {
+          const { style = { width: "", height: "", marginBottom: "" } } = d;
+
+          style.width = "60px";
+          style.height = "60px";
+          style.marginBottom = "0px";
         }
       };
     });
