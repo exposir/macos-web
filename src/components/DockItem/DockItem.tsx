@@ -1,5 +1,4 @@
 import moduleCss from "./DockItem.module.scss";
-import { useEffect, useRef } from "react";
 
 function DockItem(props = { src: "" }) {
   const { src } = props;
