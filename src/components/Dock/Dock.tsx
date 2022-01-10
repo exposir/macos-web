@@ -12,7 +12,7 @@ import { useEffect, useRef } from "react";
 function Dock() {
   const refContainer = useRef(null);
   useEffect(() => {
-    const children = refContainer.current.children;
+    const children = refContainer.current?.children;
     const array = Array.from(children);
     array.forEach((item, index) => {
       console.log(item);
