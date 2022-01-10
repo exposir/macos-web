@@ -10,13 +10,14 @@ import store from "../../asset/store.webp";
 import { useEffect, useRef } from "react";
 
 function Dock() {
-  const refContainer = useRef(null);
+  const refContainer = useRef({ children: [] });
   useEffect(() => {
-    const children = refContainer.current?.children;
+    const { children } = refContainer.current;
+
     const array = Array.from(children);
-    array.forEach((item, index) => {
+    array.forEach((item: any, index) => {
       console.log(item);
-      item.onmouseenter = (e) => {
+      item.onmouseenter = () => {
         item.style.width = "100px";
         item.style.height = "100px";
         item.style.marginBottom = "30px";
@@ -84,6 +85,13 @@ function Dock() {
       <DockItem src={safari} />
       <DockItem src={vscode} />
       <DockItem src={store} />
+      <DockItem src={setting} />
+      <DockItem src={setting} />
+      <DockItem src={setting} />
+      <DockItem src={setting} />
+      <DockItem src={setting} />
+      <DockItem src={setting} />
+      <DockItem src={setting} />
       <DockItem src={setting} />
     </div>
   );
