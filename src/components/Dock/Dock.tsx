@@ -58,11 +58,11 @@ function Dock() {
   const finder =
     "https://cdn.jsdelivr.net/gh/exposir/beds@main/macos-web/finder.webp";
   const safari =
-    "https://raw.githubusercontent.com/exposir/beds/main/macos-web/safari.webp";
+    "https://cdn.jsdelivr.net/gh/exposir/beds@main/macos-web/safari.webp";
   const vscode =
-    "https://raw.githubusercontent.com/exposir/beds/main/macos-web/vscode.webp";
+    "https://cdn.jsdelivr.net/gh/exposir/beds@main/macos-web/vscode.webp";
   const store =
-    "https://raw.githubusercontent.com/exposir/beds/main/macos-web/store.webp";
+    "https://cdn.jsdelivr.net/gh/exposir/beds@main/macos-web/store.webp";
   const setting =
     "https://cdn.jsdelivr.net/gh/exposir/beds@main/macos-web/setting.webp";
 
