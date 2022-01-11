@@ -1,11 +1,5 @@
 import moduleCss from "./Dock.module.scss";
 import DockItem from "../DockItem/DockItem";
-import canader from "@/asset/canader.webp";
-import finder from "@/asset/finder.webp";
-import setting from "@/asset/setting.webp";
-import safari from "@/asset/safari.webp";
-import vscode from "@/asset/vscode.webp";
-import store from "@/asset/store.webp";
 
 import { useEffect, useRef } from "react";
 
@@ -58,6 +52,19 @@ function Dock() {
       };
     });
   }
+
+  const canader =
+    "https://raw.githubusercontent.com/exposir/beds/main/macos-web/canader.webp";
+  const finder =
+    "https://raw.githubusercontent.com/exposir/beds/main/macos-web/finder.webp";
+  const safari =
+    "https://raw.githubusercontent.com/exposir/beds/main/macos-web/safari.webp";
+  const vscode =
+    "https://raw.githubusercontent.com/exposir/beds/main/macos-web/vscode.webp";
+  const store =
+    "https://raw.githubusercontent.com/exposir/beds/main/macos-web/store.webp";
+  const setting =
+    "https://raw.githubusercontent.com/exposir/beds/main/macos-web/setting.webp";
 
   return (
     <div ref={refContainer} className={moduleCss.Dock}>
