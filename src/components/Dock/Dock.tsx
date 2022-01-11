@@ -54,9 +54,9 @@ function Dock() {
   }
 
   const canader =
-    "https://raw.githubusercontent.com/exposir/beds/main/macos-web/canader.webp";
+    "https://cdn.jsdelivr.net/gh/exposir/beds@main/macos-web/canader.webp";
   const finder =
-    "https://raw.githubusercontent.com/exposir/beds/main/macos-web/finder.webp";
+    "https://cdn.jsdelivr.net/gh/exposir/beds@main/macos-web/finder.webp";
   const safari =
     "https://raw.githubusercontent.com/exposir/beds/main/macos-web/safari.webp";
   const vscode =
@@ -64,7 +64,7 @@ function Dock() {
   const store =
     "https://raw.githubusercontent.com/exposir/beds/main/macos-web/store.webp";
   const setting =
-    "https://raw.githubusercontent.com/exposir/beds/main/macos-web/setting.webp";
+    "https://cdn.jsdelivr.net/gh/exposir/beds@main/macos-web/setting.webp";
 
   return (
     <div ref={refContainer} className={moduleCss.Dock}>
