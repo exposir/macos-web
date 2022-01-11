@@ -1,6 +1,8 @@
 {
-  "name": "ui-mac-os",
-  "version": "0.0.0",
+  "name": "macos-web",
+  "version": "0.0.1",
+  "description": "macos web power by react",
+  "main": "index.js",
   "scripts": {
     "start": "vite",
     "dev": "vite",
