@@ -1,0 +1,13 @@
+{
+  "/_app": "pages/_app.js",
+  "/components/AppleIcon/AppleIcon": "pages/components/AppleIcon/AppleIcon.html",
+  "/components/Desktop/Desktop": "pages/components/Desktop/Desktop.html",
+  "/components/Dock/Dock": "pages/components/Dock/Dock.html",
+  "/components/DockItem/DockItem": "pages/components/DockItem/DockItem.html",
+  "/components/Mask/Mask": "pages/components/Mask/Mask.html",
+  "/components/MenuBar/MenuBar": "pages/components/MenuBar/MenuBar.html",
+  "/": "pages/index.html",
+  "/_error": "pages/_error.js",
+  "/_document": "pages/_document.js",
+  "/404": "pages/404.html"
+}

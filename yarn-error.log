@@ -1,0 +1,38 @@
+Arguments: 
+  /Users/menglingyu/.nvm/versions/node/v14.18.2/bin/node /Users/menglingyu/.nvm/versions/node/v14.18.2/bin/yarn
+
+PATH: 
+  /Users/menglingyu/.nvm/versions/node/v14.18.2/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin:/Users/menglingyu/.cargo/bin:/Users/menglingyu/arcanist/bin
+
+Yarn version: 
+  1.22.17
+
+Node version: 
+  14.18.2
+
+Platform: 
+  darwin x64
+
+Trace: 
+  Error: ENOENT: no such file or directory, copyfile '/Users/menglingyu/Library/Caches/Yarn/v6/npm-ansi-styles-4.3.0-edd803628ae71c04c85ae7a0906edad34b648937-integrity/node_modules/ansi-styles/index.d.ts' -> '/Users/menglingyu/My/nextjs-blog/node_modules/@next/react-dev-overlay/node_modules/ansi-styles/index.d.ts'
+
+npm manifest: 
+  {
+    "private": true,
+    "scripts": {
+      "dev": "next dev",
+      "build": "next build",
+      "start": "next start"
+    },
+    "dependencies": {
+      "next": "latest",
+      "react": "17.0.2",
+      "react-dom": "17.0.2"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

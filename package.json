@@ -1,26 +1,19 @@
 {
-  "name": "macos-web",
-  "version": "0.0.1",
-  "description": "macos web power by react",
-  "main": "index.js",
+  "private": true,
   "scripts": {
-    "start": "vite",
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview"
+    "dev": "next dev -p 3333",
+    "build": "next build",
+    "start": "next start"
   },
   "dependencies": {
     "dayjs": "^1.10.7",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "sass": "^1.46.0"
+    "next": "latest",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "sass": "^1.49.0"
   },
   "devDependencies": {
-    "@types/node": "^17.0.8",
-    "@types/react": "^17.0.33",
-    "@types/react-dom": "^17.0.10",
-    "@vitejs/plugin-react": "^1.0.7",
-    "typescript": "^4.4.4",
-    "vite": "^2.7.2"
+    "@types/react": "^17.0.38",
+    "typescript": "^4.5.4"
   }
 }

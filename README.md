@@ -1,13 +1,1 @@
-# macos-web
-
-- 组件化
-- 可定制
-- 易部署
-
-- 各司其责
-- 组件封装
-- 过程抽象
-
-- js 是第一生产力
-- 能用 css 就不用 js
-- 能用 js 就不用 html
+This is a starter template for [Learn Next.js](https://nextjs.org/learn).
