@@ -1,5 +1,8 @@
 {
   "private": true,
+  "name": "macos-web",
+  "version": "0.0.1",
+  "description": "macos web power by react",
   "scripts": {
     "dev": "next dev -p 3333",
     "build": "next build",
