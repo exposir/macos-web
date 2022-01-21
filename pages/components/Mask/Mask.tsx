@@ -1,8 +1,9 @@
 import moduleCss from "./Mask.module.scss";
+import dynamic from "next/dynamic";
 import { useState, useEffect } from "react";
-import AppleIcon from "../AppleIcon/AppleIcon";
 
 function Mask() {
+  const AppleIcon = dynamic(() => import("../AppleIcon/AppleIcon"));
   const [show, setShow] = useState(true);
 
   useEffect(() => {

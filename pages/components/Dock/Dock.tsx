@@ -1,9 +1,9 @@
 import moduleCss from "./Dock.module.scss";
-import DockItem from "../DockItem/DockItem";
-
+import dynamic from "next/dynamic";
 import { useEffect, useRef } from "react";
 
 function Dock() {
+  const DockItem = dynamic(() => import("../DockItem/DockItem"));
   const refContainer = useRef(null);
   useEffect(() => {
     addAnimation();

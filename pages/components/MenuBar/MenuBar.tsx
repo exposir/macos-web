@@ -1,15 +1,16 @@
 import moduleCss from "./MenuBar.module.scss";
-import dayjs from "dayjs";
-import zhCn from "dayjs/locale/zh-cn";
+import dynamic from "next/dynamic";
 import { useEffect, useState } from "react";
-import AppleIcon from "../AppleIcon/AppleIcon";
 
 function Dock() {
+  const AppleIcon = dynamic(() => import("../AppleIcon/AppleIcon"));
   const [time, setTime] = useState("");
-  useEffect(() => {
-    setInterval(() => {
-      const dayjsZh = dayjs().locale(zhCn);
 
+  useEffect(() => {
+    setInterval(async () => {
+      const dayjs = (await import("dayjs")).default;
+      const zhCn = (await import("dayjs/locale/zh-cn")).default;
+      const dayjsZh = dayjs().locale(zhCn);
       const day = dayjsZh.format("MMMD日");
       const week = dayjsZh.format("ddd");
       const time = dayjsZh.format("a h:mm");

@@ -1,9 +1,11 @@
 import moduleCss from "./Desktop.module.scss";
-import Dock from "../Dock/Dock";
-import MenuBar from "../MenuBar/MenuBar";
-import Mask from "../Mask/Mask";
+import dynamic from "next/dynamic";
 
 function Desktop() {
+  const Dock = dynamic(() => import("../Dock/Dock"));
+  const MenuBar = dynamic(() => import("../MenuBar/MenuBar"));
+  const Mask = dynamic(() => import("../Mask/Mask"));
+
   return (
     <div className={moduleCss.container}>
       <MenuBar />
