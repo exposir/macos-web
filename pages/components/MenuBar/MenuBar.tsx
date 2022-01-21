@@ -21,7 +21,7 @@ function Dock() {
   return (
     <div className={moduleCss.MenuBar}>
       <AppleIcon size="18px" color="black" />
-      <div>{time}</div>
+      <div>{time ? time : "loading..."}</div>
     </div>
   );
 }

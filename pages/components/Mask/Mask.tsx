@@ -9,7 +9,7 @@ function Mask() {
   useEffect(() => {
     setTimeout(() => {
       setShow(false);
-    }, 1000);
+    }, 10000);
   }, []);
 
   return show ? (
