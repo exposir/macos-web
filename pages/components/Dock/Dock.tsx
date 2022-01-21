@@ -1,9 +1,8 @@
 import moduleCss from "./Dock.module.scss";
-import dynamic from "next/dynamic";
 import { useEffect, useRef } from "react";
+import DockItem from "../DockItem/DockItem";
 
 function Dock() {
-  const DockItem = dynamic(() => import("../DockItem/DockItem"));
   const refContainer = useRef(null);
   useEffect(() => {
     addAnimation();
@@ -19,10 +18,8 @@ function Dock() {
       const lMarginBottom = 20;
       const mSize = 70;
       const mMarginBottom = 10;
-
       const defaultSize = 60;
       const defaulteMarginBottom = 10;
-
       const LLeftItem = array[index - 1];
       const LRightItem = array[index + 1];
       const mLeftItem = array[index - 2];
